@@ -737,7 +737,8 @@ open class SVGParser {
         }
 
         guard var fillColor = styleParts[SVGKeys.fill] else {
-            return Color.black.with(a: opacity)
+            return Color.clear
+//            return Color.black.with(a: opacity)
         }
         if let colorId = parseIdFromUrl(fillColor) {
             if let fill = defFills[colorId] {
