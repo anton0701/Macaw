@@ -622,7 +622,8 @@ open class SVGParser {
         }
 
         guard var fillColor = styleParts["fill"] else {
-            return Color.black.with(a: opacity)
+//            return Color.black.with(a: opacity)
+            return Color.clear
         }
         if let colorId = parseIdFromUrl(fillColor) {
             if let fill = defFills[colorId] {
